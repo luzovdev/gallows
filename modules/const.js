@@ -1,13 +1,16 @@
 const arrWords = ['яблоко', 'груша', 'банан', 'киви', 'арбуз'];
 let randWord = arrWords[Math.floor(Math.random() * arrWords.length)];
-// console.log(randWord);
+
+
 export const arrWordForRandom = randWord.split('');
-// console.log(arrWordForRandom);
 let lenghtArrWordForRandom = arrWordForRandom.length;
-// console.log(lenghtArrWordForRandom);
 
 export const dashesNode = document.getElementById('dashes');
-const inputNode = document.querySelector('input')
+
+export const dashes = arrWordForRandom.map(item => item = '_');
+
+export let inputNode = document.getElementById('input-id');
+export let btn = document.getElementById('btn');
 
 
 
