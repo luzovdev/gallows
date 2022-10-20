@@ -1,7 +1,7 @@
-import {arrWordForRandom,btn,dashes,inputNode, dashesNode} from './const.js';
-import {showRandomDashes} from './showDashes.js';
-import {showErrorImage} from './showErrorImage.js';
-import {victory} from './victory.js';
+import {arrWordForRandom,btn,dashes,inputNode, dashesNode} from './modules/const.js';
+import {showRandomDashes} from './modules/showDashes.js';
+import {showErrorImage} from './modules/showErrorImage.js';
+import {victory} from './modules/victory.js';
 
 
 console.log(arrWordForRandom);
@@ -10,6 +10,7 @@ console.log(dashes);
 
 function game(arrWord, arrDashes){ 
     let countFalse = 0;
+    showRandomDashes();
     function onBtnClick () {
         arrWord.forEach((item, index) => {
             if (inputNode.value === item) {
