@@ -11,7 +11,7 @@
             margin: 0 auto;
             overflow: hidden;
         }        
-        #img_1 {
+        #img {
             display: block;
             margin: 0 auto;
             max-width: 80%;
@@ -61,11 +61,11 @@
             font-size: 120px;
             /* max-height: 100vh; */
         }
-        .restart {
+        /* .restart {
             font-size: 20px;
             margin-bottom: 20px;
-        }
-        #resultVictory {
+        } */
+        /* #resultVictory {
         display: none;
         height: 100%;
         }
@@ -76,7 +76,7 @@
         #sadness {
             margin-top: 50px;
             width: 120px;
-        }
+        } */
     </style>
 </head>
 
@@ -84,10 +84,7 @@
 
     <div id="gameWrapper">
         <div id="img" class="img">
-            <img id="img_1" src="1.png" alt="">
-            <img id="img_2" src="2.png" alt="">
-            <img id="img_3" src="3.png" alt="">
-            <img id="img_4" src="4.png" alt=""> 
+            <img id="image" src="1.png" alt="">
         </div>
         <div id="dashes">
         </div>
@@ -96,7 +93,7 @@
             <button id="btn">Ok</button>
         </div>        
     </div>
-    <div id="resultVictory" class="result">
+    <!-- <div id="resultVictory" class="result">
         <p class="textResult">
             ПОБЕДА!!!
         </p>       
@@ -111,6 +108,13 @@
         </p>       
         <button class="restart">
             <a href="#" onclick="window.location.reload();">Начать игру заново</a>
+        </button>
+    </div> -->
+    <div id="result">
+        <p id="textResult">
+        </p>       
+        <button class="restart">
+         
         </button>
     </div>
     <script src="index.js" type="module"></script>    
