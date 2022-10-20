@@ -1,12 +1,18 @@
-import {arrWordForRandom,btn,dashes,inputNode,valueInput} from './const.js'
+import {arrWordForRandom,btn,dashes,inputNode, dashesNode} from './const.js'
 
-function showWords(arrWord){
+console.log(arrWordForRandom);
+console.log(dashes);
+function showWords(arrWord, arrDashes){
     btn.addEventListener('click',() => {
-        arr.forEach(item => {
-            console.log(item);
+        arrWord.forEach((item, i) => {
+            if (inputNode.value === item) {
+                arrDashes[i] = item;
+                dashesNode.innerText = inputNode.value;
+                console.log(arrDashes);
+            }
         });
     })
 }
 
-showWords()
+showWords(arrWordForRandom, dashes)
 
