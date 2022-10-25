@@ -1,15 +1,16 @@
-export function victory(arr1, arr2) {
-    let divVictory = document.getElementById('resultVictory');
-    let offWrapper = document.getElementById('gameWrapper');
-    let sum = 0;
-    for (let i = 0; i < arr1.length; i++) {
-        if (arr1[i] === arr2[i]) {
-            sum++;
-            // console.log('победа');
-            if (sum === arr1.length) {
-                offWrapper.style.display = 'none';
-                divVictory.style.display = 'block';
-            }            
-        }        
+
+import { resultBlock, textResult, restartBtn, gameWrapper } from './const.js'
+export function victory(arrCorrentLetters, arrCorrentAnswer) {
+    let numOfCorrentAnsw = 0;
+    for (let i = 0; i < arrCorrentLetters.length; i++) {
+        if (arrCorrentLetters[i] === arrCorrentAnswer[i]) {
+            numOfCorrentAnsw++;
+            if (numOfCorrentAnsw === arrCorrentLetters.length) {
+                resultBlock.style.display = 'block';
+                textResult.innerText = 'ПОБЕДА!';
+                gameWrapper.style.display = 'none';
+                restartBtn.addEventListener('click', () => location.reload());
+            }
+        }
     }
 }
