@@ -1,10 +1,10 @@
-export function gameover(countFalse) {
-    let divGameover = document.getElementById('resultGameover');
-    let offWrapper = document.getElementById('gameWrapper');
+import { resultBlock, textResult, restartBtn, gameWrapper } from './const.js'
+
+export function gameover() {
     setTimeout(() => {
-        if (countFalse === 3) {
-            offWrapper.style.display = 'none';
-            divGameover.style.display = 'block';
-        }        
-    }, 500);    
+        resultBlock.style.display = 'block';
+        textResult.innerText = 'Поражение!';
+        gameWrapper.style.display = 'none';
+        restartBtn.addEventListener('click', () => location.reload());
+    }, 500);
 }
