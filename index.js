@@ -22,6 +22,11 @@ function game(arrWord, arrDashes) {
         }
         victory(arrWord, arrDashes);
     }
-    btn.addEventListener('click', onBtnClick);
+    btn.addEventListener('click',onBtnClick);
+    inputNode.addEventListener('keydown',function(e){
+        if (e.keyCode === 13){
+            onBtnClick();
+        }
+    })
 }
 game(arrWordForRandom, dashes);
